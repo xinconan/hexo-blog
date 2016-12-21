@@ -9,7 +9,7 @@ tags: angular
 TypeError: Cannot read property 'insertBefore' of null
 ```
 在网上找了一些资料，总结了下，需要在`ng-repeat`、`ng-if`等标签外面再加个`div`标签，
-加上了就没有报错。  
+加上了就没有报错。如果当前页面没有用到`ng-repeat`、`ng-if`之类的标签，就需要从父路由中找了。  
 错误前：
 ```html
 <div ng-if="view.type !== 'ali'">
